@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    padding: 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #333;
+}
+
+/* MAIN / SECTIONS */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* GRID DE SERVICIOS */
+.grid-servicios {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.grid-servicios article {
+    flex: 1 1 280px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.grid-servicios article:hover {
+    transform: translateY(-4px);
+}
+
+.grid-servicios article h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.grid-servicios article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.grid-servicios article p {
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .grid-servicios {
+        flex-direction: column;
+    }
+}
+
+/* FORMULARIO */
+#solicitud {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4a90d9;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #22862f;
+}
+
+/* CONTACTO */
+#contacto {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+#contacto p {
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+body.dark {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark header,
+body.dark footer,
+body.dark section,
+body.dark article,
+body.dark form {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark a {
+    color: #8ab4f8;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #888;
+}
+
+body.dark button {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #888;
+}
+
+body.dark #solicitud,
+body.dark #servicios,
+body.dark #contacto {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p,
+body.dark label {
+    color: #fff;
+}
+
+body.dark #solicitud form {
+    background-color: #3a3a3a;
+}/* ===== MODO OSCURO CORPORATIVO ===== */
+body.dark-mode {
+    background-color: #0f172a;   /* azul marino muy oscuro */
+    color: #e2e8f0;              /* gris claro para el texto */
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1e293b;   /* azul grisáceo oscuro */
+    color: #f8fafc;
+}
+
+body.dark-mode section,
+body.dark-mode article,
+body.dark-mode form {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode label {
+    color: #f8fafc;
+}
+
+body.dark-mode a {
+    color: #38bdf8;              /* azul claro corporativo */
+}
+
+body.dark-mode a:hover {
+    color: #7dd3fc;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #334155;
+    color: #f8fafc;
+    border: 1px solid #475569;
+}
+
+body.dark-mode button {
+    background-color: #2563eb;   /* azul corporativo */
+    color: #fff;
+    border: none;
+}
+
+body.dark-mode button:hover {
+    background-color: #1d4ed8;
+}
+
+body.dark-mode #solicitud,
+body.dark-mode #servicios,
+body.dark-mode #contacto {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+body.dark-mode #solicitud h2,
+body.dark-mode #solicitud label {
+    color: #f8fafc;
+}
+
+body.dark-mode #solicitud form {
+    background-color: #263449;
+}
+
+body.dark-mode #solicitud input,
+body.dark-mode #solicitud textarea {
+    background-color: #334155;
+    color: #f8fafc;
+    border: 1px solid #475569;
+}
+
+body.dark-mode #solicitud button {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.mensaje-error {
+    color: red;
+    font-size: 0.9rem;
+    margin: 4px 0 0;
+}
+
+.error {
+    border: 2px solid red;
+    background-color: #ffe5e5;
+}
+
+.mensaje-error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* Para que el fondo rojizo no desentone en modo oscuro */
+body.dark-mode .error {
+    background-color: #4a1d1d;
+}
+
+/* Error en modo oscuro: debe ir DESPUÉS de las demás reglas */
+body.dark-mode input.error,
+body.dark-mode #solicitud input.error,
+body.dark-mode #solicitud textarea.error {
+    border: 2px solid #ff4d4d;
+    background-color: #4a1d1d;
+}
+
+body.dark-mode .mensaje-error {
+    color: #ff6b6b;
+}

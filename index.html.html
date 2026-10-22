@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Taller</title>
+
+    <meta name="author" content="Kevin">
+    <meta name="description" content="Primer proyecto de APW.">
+    <meta name="keywords" content="Taller, proyecto, hola,">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+</head>
+</head>
+
+
+
+
+</head>
+<body>
+   <header>
+    <h1>Mi Pagina Web</h1>
+
+    <button id="btn-theme" type="button">Cambiar tema</button>
+
+    <nav>
+        <ul>
+            <li><a href="#servicios">Inicio</a></li>
+            <li><a href="#solicitud">Sobre mi</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+    
+<main>
+    <section id="servicios">
+    <h2>Servicios</h2>
+    <p>Ofrecemos soluciones rápidas y fiables para las averías más comunes en el hogar.</p>
+
+    <h3>Averías habituales</h3>
+
+    <div class="grid-servicios">
+
+        <article>
+            <h4>Fugas de agua</h4>
+            <img src="assets/img/malware.jpg" alt="Fuga de agua en una tuberías" width="300" height="200">
+            <p>Las fugas de agua suelen originarse por tuberías desgastadas o juntas mal selladas. Si no se reparan a tiempo, pueden provocar daños estructurales y un aumento considerable en la factura del agua.</p>
+        </article>
+
+        <article>
+            <h4>Cortocircuitos eléctricos</h4>
+            <img src="assets/img/manteniment.jpg" alt="Panel eléctrico con cables" width="300" height="200">
+            <p>Un cortocircuito puede deberse a cableado antiguo, sobrecarga de enchufes o humedad en la instalación. Es una de las averías más peligrosas, ya que puede provocar incendios si no se atiende rápidamente.</p>
+        </article>
+
+        <article>
+            <h4>Calefacción que no calienta</h4>
+            <img src="assets/img/xarxes.jpg" alt="Radiador de calefacción" width="300" height="200">
+            <p>Cuando la calefacción deja de funcionar correctamente, suele deberse a aire acumulado en el circuito, falta de presión o un termostato defectuoso. Un mantenimiento periódico ayuda a prevenir este problema.</p>
+        </article>
+
+    </div>
+</section>
+
+   <section id="solicitud">
+    <h2>Formulario</h2>
+    <form action="/enviar" method="post" novalidate>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <span class="mensaje-error" id="error-nombre"></span>
+        <br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido">
+        <span class="mensaje-error" id="error-apellido"></span>
+        <br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email">
+        <span class="mensaje-error" id="error-email"></span>
+        <br><br>
+
+        <button type="submit">Enviar solicitud</button>
+
+    </form>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Web Taller. Todos los derechos reservados.</p>
+    <p>Autor: Kevin</p>
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
