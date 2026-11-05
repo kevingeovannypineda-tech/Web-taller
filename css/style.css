@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -23,10 +27,22 @@ header h1 {
     margin-bottom: 12px;
 }
 
+#btn-theme {
+    padding: 8px 14px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #eee;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
 nav ul {
     display: flex;
     gap: 24px;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -83,6 +99,7 @@ section h3 {
 
 .grid-servicios article:hover {
     transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .grid-servicios article h4 {
@@ -134,7 +151,7 @@ textarea {
     border-radius: 6px;
     font-size: 16px;
     font-family: Arial, sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
 }
 
 input:focus,
@@ -154,10 +171,35 @@ button[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 button[type="submit"]:hover {
     background-color: #22862f;
+}
+
+/* VALIDACIÓN */
+.error {
+    border: 2px solid red;
+    background-color: #ffe5e5;
+}
+
+.correcto {
+    border: 2px solid #28a745;
+}
+
+.mensaje-error {
+    display: block;
+    min-height: 22px;
+    margin: 0 0 12px;
+    color: red;
+    font-size: 0.9rem;
+}
+
+.mensaje-exito {
+    margin-top: 12px;
+    color: #1e7e34;
+    font-weight: bold;
 }
 
 /* CONTACTO */
@@ -182,68 +224,17 @@ footer {
     color: #777;
 }
 
-
-
-body.dark {
-    background-color: #222;
-    color: #fff;
-}
-
-body.dark header,
-body.dark footer,
-body.dark section,
-body.dark article,
-body.dark form {
-    background-color: #333;
-    color: #fff;
-}
-
-body.dark a {
-    color: #8ab4f8;
-}
-
-body.dark input,
-body.dark textarea,
-body.dark select {
-    background-color: #444;
-    color: #fff;
-    border: 1px solid #888;
-}
-
-body.dark button {
-    background-color: #555;
-    color: #fff;
-    border: 1px solid #888;
-}
-
-body.dark #solicitud,
-body.dark #servicios,
-body.dark #contacto {
-    background-color: #333;
-    color: #fff;
-}
-
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4,
-body.dark p,
-body.dark label {
-    color: #fff;
-}
-
-body.dark #solicitud form {
-    background-color: #3a3a3a;
-}/* ===== MODO OSCURO CORPORATIVO ===== */
+/* ===== MODO OSCURO CORPORATIVO ===== */
 body.dark-mode {
-    background-color: #0f172a;   /* azul marino muy oscuro */
-    color: #e2e8f0;              /* gris claro para el texto */
+    background-color: #0f172a;
+    color: #e2e8f0;
 }
 
 body.dark-mode header,
 body.dark-mode footer {
-    background-color: #1e293b;   /* azul grisáceo oscuro */
+    background-color: #1e293b;
     color: #f8fafc;
+    border-color: #334155;
 }
 
 body.dark-mode section,
@@ -251,6 +242,11 @@ body.dark-mode article,
 body.dark-mode form {
     background-color: #1e293b;
     color: #e2e8f0;
+    border-color: #334155;
+}
+
+body.dark-mode #servicios {
+    background-color: transparent;
 }
 
 body.dark-mode h1,
@@ -262,12 +258,13 @@ body.dark-mode label {
     color: #f8fafc;
 }
 
-body.dark-mode a {
-    color: #38bdf8;              /* azul claro corporativo */
+body.dark-mode nav ul li a {
+    color: #38bdf8;
 }
 
-body.dark-mode a:hover {
+body.dark-mode nav ul li a:hover {
     color: #7dd3fc;
+    border-bottom-color: #7dd3fc;
 }
 
 body.dark-mode input,
@@ -279,7 +276,7 @@ body.dark-mode select {
 }
 
 body.dark-mode button {
-    background-color: #2563eb;   /* azul corporativo */
+    background-color: #2563eb;
     color: #fff;
     border: none;
 }
@@ -289,67 +286,30 @@ body.dark-mode button:hover {
 }
 
 body.dark-mode #solicitud,
-body.dark-mode #servicios,
 body.dark-mode #contacto {
     background-color: #1e293b;
     color: #e2e8f0;
-}
-
-body.dark-mode #solicitud h2,
-body.dark-mode #solicitud label {
-    color: #f8fafc;
 }
 
 body.dark-mode #solicitud form {
     background-color: #263449;
 }
 
-body.dark-mode #solicitud input,
-body.dark-mode #solicitud textarea {
-    background-color: #334155;
-    color: #f8fafc;
-    border: 1px solid #475569;
-}
-
-body.dark-mode #solicitud button {
-    background-color: #2563eb;
-    color: #fff;
-    border: none;
-}
-
-.error {
-    border: 2px solid red;
-}
-
-.mensaje-error {
-    color: red;
-    font-size: 0.9rem;
-    margin: 4px 0 0;
-}
-
-.error {
-    border: 2px solid red;
-    background-color: #ffe5e5;
-}
-
-.mensaje-error {
-    color: red;
-    font-size: 0.9rem;
-}
-
-/* Para que el fondo rojizo no desentone en modo oscuro */
-body.dark-mode .error {
-    background-color: #4a1d1d;
-}
-
-/* Error en modo oscuro: debe ir DESPUÉS de las demás reglas */
+/* Errores en modo oscuro: deben ir al final */
 body.dark-mode input.error,
-body.dark-mode #solicitud input.error,
-body.dark-mode #solicitud textarea.error {
+body.dark-mode #solicitud input.error {
     border: 2px solid #ff4d4d;
     background-color: #4a1d1d;
 }
 
+body.dark-mode input.correcto {
+    border: 2px solid #34d399;
+}
+
 body.dark-mode .mensaje-error {
     color: #ff6b6b;
+}
+
+body.dark-mode .mensaje-exito {
+    color: #34d399;
 }
